@@ -3,6 +3,8 @@ layout: page
 title: Archive
 ---
 
+<link rel="icon" href="images/Designer.png">
+
 <section>
   {% if site.posts[0] %}
 
