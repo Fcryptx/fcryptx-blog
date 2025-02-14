@@ -11,6 +11,10 @@ $header: $conifer !default;
 $blockquote-color: $silver-chalice !default;
 $blockquote-border: $dove-grey !default;
 
+a{
+  text-decoration: none;
+}
+
 a:hover{
   color: #0f2;
 }
@@ -36,7 +40,8 @@ body {
 
 *::selection{
   color: #0f0 !important;
-  background-color: #444 !important;
+  background-color: #000 !important;
+  text-shadow: 5 1 5px #0f0; text-shadow: 0 0 5px #aaa;
 }
 
 section {
@@ -154,6 +159,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #main_content h2 {
   font-size: 24px;
+  padding-left: 3px;
 }
 
 #main_content h3 {
@@ -336,19 +342,22 @@ ul li h2 a{
   text-decoration: none;
 }
 
-dl{
+#commands {
   display: flex;
-  gap: 10px;
   flex-direction: column;
+  gap: 10px;
 }
-dt{
-  padding: 2px;
+
+#commands dt b{
+  background-color: #000;
+  display: inline;
+  padding: 0 4px;
   color: #0f0;
 }
-dd{
-  display: inline-block;
+
+#commands dd{
+  background-color: #000;
   padding: 5px;
-  background-color: #0008
 }
 
 .bold-custom-1{
@@ -408,4 +417,81 @@ summary{
   color: #2fa;
   text-shadow: 1px 1px 2px #0f0;
   background-color: #0f01;
+}
+
+#operadores{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  gap: 10px;
+}
+
+#operadores dt > b{
+  background-color: #000;
+  display: inline;
+  padding: 4px;
+  border-radius: 5px;
+  color: #0f0;
+}
+
+#operadores dd{
+  background-color: #000;
+  padding: 5px;
+}
+
+#example-div{
+  padding: 10px;
+}
+
+.material-symbols-outlined{
+  color: #fff;
+  padding-right: 2px;
+}
+
+
+#searching {
+  border-radius: 18px;
+  background-color: #333 !important;
+  color: #fff;
+  display: flex;
+  padding: 8px;
+}
+
+#operadores > #searching > b{
+  background-color: none;
+}
+
+#dorks{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#dorks dt{
+  font-style: inherit ;
+}
+
+#dorks dd{
+  background-color: #000;
+  padding: 5px;
+}
+
+#questions{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#questions b{
+  background-color: #000;
+  padding: 5px;
+  color: #0f0;
+}
+
+#questions dd{
+  background-color: #000;
+  padding: 2px;
+  text-align: right;
+  color: #fff;
 }
