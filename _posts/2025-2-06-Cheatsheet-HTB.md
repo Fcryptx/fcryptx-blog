@@ -1,6 +1,6 @@
 ---
 title: Cheatsheet HTB
-published: false
+published: true
 ---
 
 ---
@@ -16,7 +16,7 @@ En esta apartado especialmente se mostrara una hoja de trucos basica para hack t
 
 # Índice
 
-- <a href="#preguntas-frecuentes">Preguntas Frecuentes</a>
+- <a href="#preguntas-generales">Preguntas Generales</a>
 	- <a>Acronimos</a>
 - <details>
 	<summary><a style="cursor: pointer;">Puertos</a></summary>
@@ -28,6 +28,7 @@ En esta apartado especialmente se mostrara una hoja de trucos basica para hack t
 				<li><a href="#80-httphypertext-transfer-protocol">80 http</a></li>
 				<li><a href="#443-httpshypertext-transfer-protocol-secure">443 https</a></li>
 				<li><a href="#445-smbserver-message-block">445 smb</a></li>
+				<li><a href=#3306-mysql#>mysql</a></li>
 				<li><a href="#6379-redis">6379 redis</a></li>
 			</ul>
 		</details>
@@ -44,9 +45,10 @@ En esta apartado especialmente se mostrara una hoja de trucos basica para hack t
 	- <a href="#gobuster">Gobuster</a>
 - <a href="#ataques">Ataques</a>
 	- <a href="#sql-injection">sql injection</a>
+- <a href="Maquinas-HTB">Maquinas</a>
 
 
-# Preguntas frecuentes
+# Preguntas generales
 
 #### ¿Qué es VM?
 
@@ -115,6 +117,7 @@ En esta seccion se encontrara preguntas sobre puertos en especifocos tips comand
 	
 	<dt><b>Qué nombre de usuario es capaz de conectarse al objetivo sobre telnet con una contraseña en blanco? </b></dt>
 	<dd>root</dd>
+	
 	<dt><b>Cómo conectarse con telnet</b></dt>
 	<dd>telnet 10.129.21.64</dd>
 </dl>
@@ -142,8 +145,32 @@ En esta seccion se encontrara preguntas sobre puertos en especifocos tips comand
 
 ## 3306 MySql
 <dl id="questions">
-	<dt><b></b></dt>
-	<dd></dd>
+	<dt><b>Cuando se utiliza el cliente de la línea de comandos MySQL, qué interruptor necesitamos usar para especificar un nombre de usuario de inicio de sesión? </b></dt>
+	<dd>-u</dd>
+
+	<dt><b>Qué nombre de usuario nos permite iniciar sesión en esta instancia MariaDB sin proporcionar una contraseña? </b></dt>
+	<dd>root</dd>
+
+	<dt><b>En SQL, qué símbolo podemos usar para especificar dentro de la consulta que queremos mostrar todo dentro de una mesa? </b></dt>
+	<dd>*</dd>
+
+	<dt><b>En SQL, con qué símbolo necesitamos para terminar cada consulta? </b></dt>
+	<dd>;</dd>
+
+	<dt><b>Cómo conectarce con mysql</b></dt>
+	<dd>mysql -h {target_ip} -u root</dd>
+
+	<dt><b>Cómo listar las bases de datos</b></dt>
+	<dd>SHOW databases;</dd>
+
+	<dt><b>Cómo entrar a una de las bases de datos</b></dt>
+	<dd>USE database;</dd>
+
+	<dt><b>Cómo listar las tablas</b></dt>
+	<dd>SHOW tables;</dd>
+	
+	<dt><b>Cómo ver el contenido de las tablas</b></dt>
+	<dd>SELECT * FROM {table_name};</dd>
 </dl>
 
 ## 6379 redis
@@ -173,9 +200,12 @@ En esta seccion se encontrara preguntas sobre puertos en especifocos tips comand
 # Tools
 
 ## Gobuster
-<dl id="#questions">
+<dl id="questions">
 	<dt><b>Gobuster es una herramienta utilizada para los directorios de fuerza bruta en un servidor web. Qué interruptor usamos con Gobuster para especificar que estamos buscando descubrir directorios, y no subdominios? </b></dt>
 	<dd>dir</dd>
+
+	<dt><b>Qué interruptor podemos utilizar con Gobuster para especificar que estamos buscando tipos de archivos específicos? </b></dt>
+	<dd>-X</dd>
 </dl>
 
 
@@ -196,8 +226,17 @@ En esta seccion se encontrara preguntas sobre puertos en especifocos tips comand
 	<dd>#</dd>
 </dl>
 
+## Local Faile Inclusion (LFI)
+<dl id="questions">
+	<dt><b>Ejemplo de LFI en windows</b></dt>
+	<dd>.. -. -. -. -. -. -. /../windows/system32/drivers/etc/hosts</dd>
+</dl>
 
-
+## Remote File Inclusion (RFI)
+<dl id="questions">
+	<dt><b>Ejemplo de RFI en windows</b></dt>
+	<dd> //10.10.14.6/somefile</dd>
+</dl>
 
 
 

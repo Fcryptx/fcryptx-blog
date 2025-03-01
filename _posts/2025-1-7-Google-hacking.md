@@ -1,6 +1,6 @@
 ---
 title: Google Hacking
-published: false
+published: true
 ---
 
 <head>

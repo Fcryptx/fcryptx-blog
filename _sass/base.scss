@@ -27,6 +27,8 @@ body {
   font-size: 16px;
   line-height: 1.5;
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+  display: flex;
+  flex-direction: column;
 }
 
 /* General & 'Reset' Stuff */
@@ -68,6 +70,9 @@ header {
   height: 1%;
   padding: 12px;
   margin: 0 0 20px 0;
+  position: sticky;
+  top: 0;
+  opacity: 0.9
 }
 
 header div  a{
@@ -80,7 +85,7 @@ header div a h1:hover{
 }
 
 header div a h1{
-  color: #4aff9d;
+  color: #0df;
   text-shadow: 0 0 8px #01bb6d;
 }
 
@@ -335,7 +340,22 @@ footer > a{
 }
 
 #wrapper {
-  min-height: calc(100vh - 100px);
+  min-height: calc(100vh - 100px); 
+}
+
+#wrapper header{
+  background-color: #111;
+  box-shadow: 0 0 5px 0 #0fa;
+}
+
+#wrapper header:hover{
+  box-shadow: 1px 1px 10px 0 #0fa;
+}
+
+#wrapper header div{
+ display: flex;
+ gap: 10px;
+ justify-content: space-between;
 }
 
 ul li h2 a{
